@@ -1,0 +1,39 @@
+<div class="container">
+
+  <h1>Bulk Import Dashboard</h1>
+
+  <hr>
+
+  <h2>Upload CSV</h2>
+
+  <input type="file"
+         (change)="onFileSelected($event)">
+
+  <button (click)="upload()">
+
+    Upload File
+
+  </button>
+
+  <p *ngIf="selectedFileName">
+
+    Selected:
+    {{ selectedFileName }}
+
+  </p>
+
+  <hr>
+
+  <h2>Job Notifications</h2>
+
+  <ul>
+
+    <li *ngFor="let item of notifications">
+
+      {{ item }}
+
+    </li>
+
+  </ul>
+
+</div>
